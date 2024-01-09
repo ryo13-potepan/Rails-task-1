@@ -1,0 +1,38 @@
+<h3>スケジュール詳細</h3>
+
+<table>
+  <tr>
+    <th>タイトル</th>
+    <td><%= @post.title %></td>
+  </tr>
+
+  <tr>
+    <th>開始日</th>
+    <td><%= @post.start_at %></td>
+  </tr>
+
+  <tr>
+    <th>終了日</th>
+    <td><%= @post.finish_at %></td>
+  </tr>
+
+  <tr>
+    <th>終日</th>
+    <% if @post.all_day == "1" %>
+    <td><%= "○" %></td>
+    <% else %>
+    <td><%= "" %></td>
+    <% end %>
+  </tr>
+
+  <tr>
+    <th>スケジュールメモ</th>
+    <td><%= @post.memo %></td>
+  </tr>
+</table>
+
+<div class = "link_btn">
+  <ul>
+    <li><%= link_to "スケジュール一覧に戻る", :posts %></li>
+  </ul>
+</div>
