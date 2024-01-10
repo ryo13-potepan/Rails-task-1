@@ -11,6 +11,28 @@
   </head>
 
   <body>
+    <header>
+      <h1>スケジュール管理アプリ</h1>
+    </header>
     <%= yield %>
+    <footer>
+      <p class="total">スケジュール合計:</p>
+      <span id="schedule_total"><%= Post.count %></span>
+      <p class="today">本日の日付:</p>
+      <span id="today"></span>
+
+      <script type = "text/javascript">
+      document.getElementById("today").innerHTML = getToday();
+
+      function getToday() {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = today.getMonth() + 1; //月はゼロから始まるため、１を加える。
+        const day = today.getDate();
+        const s = year + "/" + month + "/" + day;
+        return s;
+      }
+      </script>
+    </footer>
   </body>
 </html>
