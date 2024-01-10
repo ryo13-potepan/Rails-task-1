@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    attributes:
+      post:
+        title: "タイトル"
+        start_at: "開始日"
+        finish_at: "終了日"
+        memo: "スケジュールメモ"
+  errors:
+    messages:
+      blank: "は必須項目です"
